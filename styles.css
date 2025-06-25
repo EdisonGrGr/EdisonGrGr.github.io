@@ -42,3 +42,7 @@
   break-inside: avoid;
 }*/
 
+.img{
+    width: auto;
+    height: 250px;
+}
