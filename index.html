@@ -1,252 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JHON EDISON GARCIA | PORTAFOLIO</title>
+    <title>JHON EDISON GARCIA GARCIA - CV</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <!--<script src="https://cdn.tailwindcss.com"></script>-->
-    <!-- 💡 Librería html2pdf -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-<!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- html2pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- html2canvas para captura de pantalla -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container-lg my-5">
-        <div class="row shadow-lg rounded-4 overflow-hidden">
-            <!-- Columna Izquierda-->
-            <div class="col-md-4 bg-primar text-white p-4">
-                <header class="text-center mb-4">
-                    <img src="img/IMG_8946.jpg" 
-                    class="img-fluid rounded-circle border border-4 border-white mb-3"
-                    alt="Foto de perfil">
-                    <h1 class="fw-bold mb-1">JHON EDISON GARCIA GARCIA</h1>
-                    <h2 class="h5 text-light">Desarrollador Web</h2>
-                </header>
-                <section class="mb-4">
-                    <h5 class="fw-bold"> 
-                        <i class="fa-solid fa-address-card me-3 mb-3"></i> Contacto</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2">
-                            <a href="https://wa.me/573148390952?text=Hola%20estoy%20interesado%20en%20tu%20perfil%20de%20desarrollador%20web"
-                            class="text-white"
-                            target="_blank"
-                            >
-                                <i class="fa-brands fa-whatsapp me-2"></i> +573148390952
-                            </a>
-                        </li>
-                        <li class="mb-2 print">
-                            <a href="mailto:edisonegro20@gmail.com?Subject=Estamos%20interesados%20en%20tu%20perfil"
-                                class="text-white"
-                                target="_blank">
-                            <i class="fa-duotone fa-regular fa-envelope me-2"></i> edisonegro20@gmail.com
-                        </a>
-                        </li>
-                        <li class="mb-2">
-                            <i class="fa-solid fa-location-dot me-2"></i> Manizales, Caldas</li>
-                        <li class="mb-2 print">
-                            <a href="https://linkedin.com/in/JhonEdisonGarcia"
-                            class="text-white"
-                            target="_blank">
-                            <i class="fa-brands fa-linkedin me-2"></i> linkedin.com/JhonEdisonGarcia
-                        </a>
-                    </li>
-                        <li class="mb-2 print">
-                            <a href="https://github.com/EdisonGrGr"
-                            class="text-white"
-                            target="_blank">
-                            <i class="fa-brands fa-github me-2"></i> github.com/EdisonGrGr
-                        </a>
-                    </li>
-                    </ul>
-                </section>
-                <!-- Habilidades -->
-                <section class="mb-4">  
-                    <h5 class="fw-bold mb-3">
-                        <i class="fa-solid fa-code me-3 mb-3"></i> Habilidades</h5>
-                        <div class="skill mb-3">
-                            <div class="d-flex justify-content-between">
-                                <span>HTML/CSS</span>
-                                <span>95%</span>
-                            </div>
-                            <div class="progress" style="height: 8px;">
-                                <div class="progress-bar"
-                                style="width: 95%">
-                                </div>
-                            </div>
-                            <div class="skill mb-3">
-                            <div class="d-flex justify-content-between">
-                                <span>INGLES</span>
-                                <span>50%</span>
-                            </div>
-                            <div class="progress" style="height: 8px;">
-                                <div class="progress-bar"
-                                style="width: 50%">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill mb-3">
-                            <div class="d-flex justify-content-between">
-                                <span>JavaScript</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="progress" style="height: 8px;">
-                                <div class="progress-bar"
-                                style="width: 80%">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill mb-3">
-                            <div class="d-flex justify-content-between">
-                                <span>Node.js</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="progress" style="height: 8px;">
-                                <div class="progress-bar"
-                                style="width: 80%">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill mb-3">
-                            <div class="d-flex justify-content-between">
-                                <span>Git/GitHub</span>
-                                <span>75%</span>
-                            </div>
-                            <div class="progress" style="height: 8px;">
-                                <div class="progress-bar"
-                                style="width: 75%">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill mb-3">
-                            <div class="d-flex justify-content-between">
-                                <span>PostgreSQL</span>
-                                <span>75%</span>
-                            </div>
-                            <div class="progress" style="height: 8px;">
-                                <div class="progress-bar"
-                                style="width: 75%">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill mb-3">
-                            <div class="d-flex justify-content-between">
-                                <span>Python</span>
-                                <span>50%</span>
-                            </div>
-                            <div class="progress" style="height: 8px;">
-                                <div class="progress-bar"
-                                style="width: 50%">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill mb-3">
-                            <div class="d-flex justify-content-between">
-                                <span>MySQL</span>
-                                <span>55%</span>
-                            </div>
-                            <div class="progress" style="height: 8px;">
-                                <div class="progress-bar"
-                                style="width: 55%">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill mb-3">
-                            <div class="d-flex justify-content-between">
-                                <span>Bootstrap</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="progress" style="height: 8px;">
-                                <div class="progress-bar"
-                                style="width: 80%">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill mb-3">
-                            <div class="d-flex justify-content-between">
-                                <span>Figma</span>
-                                <span>60%</span>
-                            </div>
-                            <div class="progress" style="height: 8px;">
-                                <div class="progress-bar"
-                                style="width: 60%">
-                                </div>
-                            </div>
-                        </div>
-                </section>
-            </div>    
-            <!-- Columna Derecha -->
-            <div class="col-md-8 bg-light p-4">
-                <section class="mb-4">
-                    <h4 class="fw-bold text-primar mb-4">
-                        <i class="fas fa-briefcase me-2"></i> Experiencia Laboral</h4>
-                        <div class="card mb-3 border-0 shadow-sm">
-                            <div class="card-body">
-                                <h4 class="card-title fw-bold">Desarrollador Web</h4>
-                                <h5 class="card-subtitle mb-2 text-muted small">2020-Actualidad</h5>
-                                <h6 class="text-primary">
-                                    Empresa Tecnológica XYZ</h6>
-                                <ul class="mt-3">
-                                    <li>Desarrollo de aplicaciones web utilizando HTML, CSS y JavaScript.</li>
-                                    <li>Implementación de bases de datos con PostgreSQL y MySQL.</li>
-                                    <li>Colaboración en proyectos de desarrollo ágil.</li>
-                                    <li>Optimización del rendimiento de aplicaciones web.</li>
-                                </ul>
-                        </div>
-                </section>
-                <section class="mb-2">
-                        <div class="card mb-3 border-0 shadow-sm">
-                            <div class="card-body">
-                                <h4 class="card-title fw-bold">Desarrollador Web</h4>
-                                <h5 class="card-subtitle mb-2 text-muted small">2020-Actualidad</h5>
-                                <h6 class="text-primary">
-                                    Empresa Tecnológica XYZ</h6>
-                                <ul class="mt-3">
-                                    <li>Desarrollo de aplicaciones web utilizando HTML, CSS y JavaScript.</li>
-                                    <li>Implementación de bases de datos con PostgreSQL y MySQL.</li>
-                                    <li>Colaboración en proyectos de desarrollo ágil.</li>
-                                    <li>Optimización del rendimiento de aplicaciones web.</li>
-                                </ul>
-                        </div>
-                </section>
-                <section class="mb-5">
-                    <h4 class="fw-bold text-primar mb-4">
-                        <i class="fa-solid fa-graduation-cap"></i> Educación</h4>
-                        <div class="card mb-3 border-0 shadow-sm">
-                            <div class="card-body">
-                                <h4 class="card-title fw-bold">Aspirante a Ingenieria Informatica</h4>
-                                <h5 class="card-subtitle mb-2 text-muted small">2020-Actualidad</h5>
-                                <h6 class="text-primary">
-                                    Universidad de Caldas</h6>
-                                <ul>
-                                    <li>Desarrollo de aplicaciones web utilizando HTML, CSS y JavaScript.</li>
-                                    <li>Implementación de bases de datos con PostgreSQL y MySQL.</li>
-                                    <li>Colaboración en proyectos de desarrollo ágil.</li>
-                                    <li>Optimización del rendimiento de aplicaciones web.</li>
-                                </ul>
-                        </div>
-                </section>            
-            </div>    
-        </div>                
+    <!-- Botones de descarga -->
+    <div class="download-buttons">
+        <button class="btn-download" onclick="downloadAsImage()">
+            <i class="fa-solid fa-image"></i> Descargar Imagen
+        </button>
+        <button class="btn-download btn-print" onclick="window.print()">
+            <i class="fa-solid fa-file-pdf"></i> Imprimir PDF
+        </button>
     </div>
 
+    <!-- Contenedor principal CV -->
+    <div class="cv-container" id="cv-content">
+        <!-- Columna Izquierda -->
+        <div class="left-column">
+            <!-- Foto de perfil -->
+            <div class="profile-photo">
+                <img src="img/perfil.jpeg" alt="Jhon Edison Garcia Garcia">
+            </div>
 
+            <!-- SOBRE MÍ -->
+            <section class="sidebar-section">
+                <h3 class="section-title-sidebar">SOBRE MÍ</h3>
+                <p class="about-text">
+                    Estudiante de Ingeniería Informática (noveno semestre en curso) con formación como 
+                    Técnico en Electricidad y Telecomunicaciones. y experiencia de más de 8 años en instalación, 
+                    mantenimiento y soporte técnico en redes de telecomunicaciones.<br>
+                    Manejo de lenguajes de programación, bases de datos y resolución de problemas tecnológicos. Capacidad de 
+                    liderazgo, trabajo en equipo y orientación al cliente.
+                </p>
+            </section>
 
-    <button class="btn btn-primar position-fixed bottom-0 end-0 m-3" onclick="downloadPDF()">
-        <i class="fa-solid fa-file-pdf me-2"></i> Descargar PDF
-        <span class="d-none d-md-inline">Portafolio</span>
-    </button>
-    <footer class="text-center py-4">
-        <p class="mb-0">© 2025 JHON EDISON GARCIA GARCIA. Todos los derechos reservados.</p>
-        <p class="mb-0">Diseñado por Jhon Edison Garcia</p>
-    </footer>
+            <!-- HABILIDADES -->
+            <section class="sidebar-section">
+                <h3 class="section-title-sidebar">HABILIDADES</h3>
+                <div class="skills-list">
+                    <p>LENGUAJES DE PROGRAMACIÓN: C#, JAVA, JAVASCRIPT, KOTLIN, HTML, CSS, PYTHON</p>
+                    <p>BASES DE DATOS: POSTGRESQL</p>
+                    <p>CABLEADO ESTRUCTURADO, CONFIGURACIÓN DE EQUIPOS DE RED, MEDICIÓN DE PARÁMETROS DE 
+                    SEÑAL, TRABAJO SEGURO EN ALTURAS, SERVICIO AL CLIENTE</p>
+                    <p>LIDERAZGO, TRABAJO EN EQUIPO, RESOLUCIÓN DE PROBLEMAS, TOMA DE DECISIONES</p>
+                </div>
+            </section>
+
+            <!-- IDIOMA -->
+            <section class="sidebar-section">
+                <h3 class="section-title-sidebar">IDIOMA</h3>
+                <p class="language">ESPAÑOL</p>
+            </section>
+
+            <!-- CURSOS -->
+            <section class="sidebar-section">
+                <h3 class="section-title-sidebar">CURSOS</h3>
+                <ul class="courses-list">
+                    <li>BOOTCAMP DE PROGRAMACIÓN<br><span class="course-org">UNIVERSIDAD DE CALDAS</span></li>
+                    <li>SERVICIO AL CLIENTE<br><span class="course-org">SENA REGIONAL CALDAS</span></li>
+                    <li>TRABAJO SEGURO EN ALTURAS AVANZADO<br><span class="course-org">SENA REGIONAL CALDAS</span></li>
+                    <li>PROGRAMACIÓN NIVEL 1 Y 2<br><span class="course-org">SENA REGIONAL CALDAS</span></li>
+                </ul>
+            </section>
+
+            <!-- REFERENCIA -->
+            <section class="sidebar-section">
+                <h3 class="section-title-sidebar">REFERENCIA</h3>
+                <div class="reference">
+                    <p class="reference-name">TANIA VIVIANA ZULUAGA GONZALES</p>
+                    <p class="reference-role">Gestam</p>
+                    <p class="reference-email">E: tania.zuluagagonzales-3@gmail.com</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Columna Derecha -->
+        <div class="right-column">
+            <!-- Header -->
+            <header class="cv-header">
+                <h1 class="name">JHON EDISON<br>GARCIA GARCIA</h1>
+                <p class="job-title">Ingeniería Informática</p>
+            </header>
+
+            <!-- Información de contacto -->
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Cra 2G # 29-31 Apto 503, Manizales, Caldas, 170001.</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>314 839 0952</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>edisonegro20@gmail.com</span>
+                </div>
+            </div>
+
+            <!-- EXPERIENCIA LABORAL -->
+            <section class="main-section">
+                <h2 class="section-title">EXPERIENCIA LABORAL</h2>
+
+                <!-- Experiencia 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="job-header">
+                            <div>
+                                <h3 class="company-name">EMTELCO</h3>
+                                <p class="job-period">dic. 2022 - abr. 2025</p>
+                            </div>
+                            <h4 class="job-position">Técnico Líder</h4>
+                        </div>
+                        <ul class="job-description">
+                            <li>Gestión y ejecución de órdenes de servicio en telecomunicaciones.</li>
+                            <li>Supervisión y seguimiento de procesos mediante dispositivos móviles.</li>
+                            <li>Cumplimiento de estándares de seguridad (SGSST) y productividad.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experiencia 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="job-header">
+                            <div>
+                                <h3 class="company-name">EMTELCO</h3>
+                                <p class="job-period">ago. 2020 - may. 2023</p>
+                            </div>
+                            <h4 class="job-position">Técnico Líder</h4>
+                        </div>
+                        <ul class="job-description">
+                            <li>Instalación, reparación y mantenimiento de redes de telecomunicaciones.</li>
+                            <li>Configuración de equipos terminales y cableado estructurado.</li>
+                            <li>Trabajo en alturas y aseguramiento de la satisfacción del cliente.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experiencia 3 -->
+
+                <!-- Experiencia 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="job-header">
+                            <div>
+                                <h3 class="company-name">EMTELCO</h3>
+                                <p class="job-period">ene. 2017 - may. 2020</p>
+                            </div>
+                            <h4 class="job-position">Técnico Líder</h4>
+                        </div>
+                        <ul class="job-description">
+                            <li>Labores de instalación y soporte de redes de telecomunicaciones.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EDUCACIÓN -->
+            <section class="main-section">
+                <h2 class="section-title">EDUCACIÓN</h2>
+
+                
+
+                <div class="timeline-item">
+                    <div class="timeline-marker education-marker"></div>
+                    <div class="timeline-content">
+                        <div class="job-header">
+                            <div>
+                                <h3 class="company-name">UNIVERSIDAD DE CALDAS</h3>
+                                <p class="job-period">Manizales</p>
+                            </div>
+                            <h4 class="job-position">Ingeniería Informática</h4>
+                        </div>
+                        <p class="education-note">• Noveno semestre en curso</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker education-marker"></div>
+                    <div class="timeline-content">
+                        <div class="job-header">
+                            <div>
+                                <h3 class="company-name">UNIVERSIDAD DE CALDAS</h3>
+                                <p class="job-period">Manizales<br>2025</p>
+                            </div>
+                            <h4 class="job-position">Bootcamp de programación nivel básico</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker education-marker"></div>
+                    <div class="timeline-content">
+                        <div class="job-header">
+                            <div>
+                                <h3 class="company-name">INTAS</h3>
+                            </div>
+                            <h4 class="job-position">Técnico Electricista y de Telecomunicaciones</h4>
+                        </div>
+                        <p class="education-note">• Matricula profesional CONTE T.E-1 TE-6 (2012)</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
 
 </body>
 </html>

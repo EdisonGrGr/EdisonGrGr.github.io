@@ -1,48 +1,561 @@
-*{
-    font-family: 'Montserrat', sans-serif;
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/*Ajuste color columna izquierda*/
-
-.bg-primar{
-    background-color: #2c3e50;
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    line-height: 1.6;
 }
 
-.progress{
-    background-color: rgba(255, 255, 255, 0.2) !important;
+/* Botones de descarga */
+.download-buttons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
 }
 
-.progress-bar{
-    background-color: white !important;
+.btn-download {
+    background-color: #d4a853;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
-/*Ajuste color texto columna derecha*/
-.text-primar{
-    color: #3498db;
+.btn-download:hover {
+    background-color: #c09640;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.btn-primar{
-    background-color: #2c3e50 !important;
-    color: white !important;
+.btn-download i {
+    margin-right: 8px;
 }
 
-/*Efecto hover a las tarjetas*/
-.card:hover{
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.btn-print {
+    background-color: #3d4e5c;
 }
 
-.print{
-    font-size: 95%;
+.btn-print:hover {
+    background-color: #2c3a47;
 }
 
-/*.no-break {
-  page-break-inside: avoid;
-  break-inside: avoid;
-}*/
+/* Contenedor principal */
+.cv-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+}
 
-.img{
-    width: auto;
-    height: 250px;
+/* Columna Izquierda */
+.left-column {
+    background-color: #3d4e5c;
+    color: white;
+    padding: 40px 30px;
+}
+
+/* Foto de perfil */
+.profile-photo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-photo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+}
+
+/* Secciones sidebar */
+.sidebar-section {
+    margin-bottom: 35px;
+}
+
+.section-title-sidebar {
+    color: #d4a853;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.about-text {
+    font-size: 13px;
+    line-height: 1.7;
+    text-align: justify;
+    color: #e8e8e8;
+}
+
+/* Habilidades */
+.skills-list p {
+    font-size: 12px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: #e8e8e8;
+}
+
+/* Idioma */
+.language {
+    font-size: 13px;
+    color: #e8e8e8;
+}
+
+/* Cursos */
+.courses-list {
+    list-style: none;
+    padding: 0;
+}
+
+.courses-list li {
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: #e8e8e8;
+    line-height: 1.5;
+}
+
+.course-org {
+    font-size: 11px;
+    color: #b8b8b8;
+    display: block;
+    margin-top: 3px;
+}
+
+/* Referencia */
+.reference {
+    font-size: 12px;
+}
+
+.reference-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #e8e8e8;
+}
+
+.reference-role {
+    margin-bottom: 3px;
+    color: #d4d4d4;
+}
+
+.reference-email {
+    font-size: 11px;
+    color: #b8b8b8;
+}
+
+/* Columna Derecha */
+.right-column {
+    padding: 50px 60px;
+    background-color: white;
+}
+
+/* Header */
+.cv-header {
+    margin-bottom: 30px;
+}
+
+.name {
+    font-size: 42px;
+    font-weight: 700;
+    color: #2c3e50;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.job-title {
+    font-size: 16px;
+    color: #d4a853;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Información de contacto */
+.contact-info {
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #555;
+}
+
+.contact-item i {
+    color: #d4a853;
+    margin-right: 12px;
+    margin-top: 2px;
+    font-size: 14px;
+    width: 20px;
+}
+
+/* Secciones principales */
+.main-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Timeline */
+.timeline-item {
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item:last-child .timeline-content::before {
+    display: none;
+}
+
+.timeline-marker {
+    width: 16px;
+    height: 16px;
+    background-color: #d4a853;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 5px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.education-marker {
+    background-color: #d4a853;
+}
+
+.timeline-content {
+    flex: 1;
+    position: relative;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 20px;
+    width: 2px;
+    height: calc(100% + 20px);
+    background-color: #d4a853;
+}
+
+/* Job header */
+.job-header {
+    margin-bottom: 12px;
+}
+
+.company-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 4px;
+}
+
+.job-period {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.job-position {
+    font-size: 14px;
+    font-weight: 600;
+    color: #d4a853;
+    margin-bottom: 10px;
+}
+
+/* Job description */
+.job-description {
+    list-style: none;
+    padding-left: 0;
+}
+
+.job-description li {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 8px;
+    padding-left: 18px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.job-description li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #d4a853;
+    font-weight: bold;
+}
+
+.education-note {
+    font-size: 13px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cv-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .right-column {
+        padding: 30px 25px;
+    }
+    
+    .left-column {
+        padding: 30px 25px;
+    }
+    
+    .name {
+        font-size: 32px;
+    }
+    
+    .btn-download {
+        top: 10px;
+        right: 10px;
+        padding: 10px 18px;
+        font-size: 12px;
+    }
+}
+
+/* Estilos para impresión/PDF */
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+    
+    html, body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+        background: white;
+        overflow: hidden;
+    }
+    
+    .download-buttons {
+        display: none !important;
+    }
+    
+    .cv-container {
+        box-shadow: none;
+        max-width: 100%;
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 35% 65%;
+        overflow: hidden;
+        page-break-after: avoid;
+        page-break-inside: avoid;
+        break-after: avoid;
+        break-inside: avoid;
+    }
+    
+    .left-column {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        padding: 25px 18px;
+        overflow: hidden;
+    }
+    
+    .right-column {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        padding: 25px 35px;
+        overflow: hidden;
+    }
+    
+    .profile-photo {
+        margin-bottom: 18px;
+    }
+    
+    .profile-photo img {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+        width: 140px;
+        height: 140px;
+    }
+    
+    .sidebar-section {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin-bottom: 18px;
+    }
+    
+    .section-title-sidebar {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+    
+    .about-text {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+    
+    .skills-list p {
+        font-size: 9px;
+        margin-bottom: 7px;
+        line-height: 1.3;
+    }
+    
+    .language {
+        font-size: 11px;
+    }
+    
+    .courses-list li {
+        font-size: 9px;
+        margin-bottom: 8px;
+        line-height: 1.3;
+    }
+    
+    .course-org {
+        font-size: 8px;
+    }
+    
+    .reference {
+        font-size: 9px;
+    }
+    
+    .reference-name {
+        font-size: 10px;
+    }
+    
+    .reference-email {
+        font-size: 8px;
+    }
+    
+    .cv-header {
+        margin-bottom: 18px;
+    }
+    
+    .name {
+        font-size: 30px;
+        line-height: 1.1;
+        margin-bottom: 6px;
+    }
+    
+    .job-title {
+        font-size: 12px;
+    }
+    
+    .contact-info {
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+    }
+    
+    .contact-item {
+        font-size: 10px;
+        margin-bottom: 6px;
+    }
+    
+    .contact-item i {
+        font-size: 11px;
+    }
+    
+    .main-section {
+        margin-bottom: 20px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    .section-title {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    
+    .timeline-item {
+        margin-bottom: 16px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    .timeline-marker {
+        width: 12px;
+        height: 12px;
+        margin-right: 15px;
+        margin-top: 4px;
+    }
+    
+    .timeline-content::before {
+        left: -22px;
+        top: 16px;
+    }
+    
+    .company-name {
+        font-size: 12px;
+        margin-bottom: 3px;
+    }
+    
+    .job-period {
+        font-size: 9px;
+        margin-bottom: 5px;
+    }
+    
+    .job-position {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+    
+    .job-description {
+        margin-top: 5px;
+    }
+    
+    .job-description li {
+        font-size: 10px;
+        margin-bottom: 4px;
+        line-height: 1.3;
+        padding-left: 15px;
+    }
+    
+    .job-description li::before {
+        font-size: 10px;
+    }
+    
+    .education-note {
+        font-size: 10px;
+        margin-top: 3px;
+    }
+    
+    /* Forzar colores en impresión */
+    * {
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
 }
